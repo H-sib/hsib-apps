@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H-sib: find me</title>
+<meta name="description" content="All the places to find H-sib.">
+<style>
+:root{--bg:#0C0D10;--card:#16181e;--text:#F4F5F7;--soft:#B9BCC6;--lime:#C6F432;--line:#2a2d36}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;min-height:100vh;overflow-x:hidden}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+.glow i{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 14s ease-in-out infinite alternate}
+.glow i:nth-child(1){width:380px;height:380px;background:#C6F432;left:-120px;top:-100px;opacity:.28}
+.glow i:nth-child(2){width:420px;height:420px;background:#6C5BFF;right:-160px;top:35%;opacity:.4;animation-delay:-5s}
+.glow i:nth-child(3){width:340px;height:340px;background:#FF6FA5;left:10%;bottom:-160px;opacity:.22;animation-delay:-9s}
+@keyframes drift{to{transform:translate(40px,30px) scale(1.12)}}
+main{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:40px 16px 56px;text-align:center}
+.mark{width:96px;height:96px;margin:0 auto 14px;display:block}
+h1{font-size:2rem;margin:0 0 6px}h1 span{color:#9a9ea9}
+.lead{color:var(--soft);margin:0 0 26px;font-size:1.05rem}
+.btn{display:flex;align-items:center;gap:14px;min-height:64px;margin:0 0 12px;padding:10px 16px;text-align:left;text-decoration:none;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:22px;font-weight:700;font-size:1.1rem;transition:transform .15s,border-color .2s,box-shadow .2s}
+.btn:hover,.btn:focus-visible{border-color:var(--lime);box-shadow:0 0 0 4px rgba(198,244,50,.16);transform:translateY(-2px);outline:none}
+.btn svg{flex:none;width:40px;height:40px;padding:8px;border-radius:13px;background:#232630}
+.btn small{display:block;font-weight:400;color:var(--soft);font-size:.9rem}
+.btn .go{margin-left:auto;color:var(--lime);font-size:1.4rem}
+.btn.main{color:#0C0D10;background:linear-gradient(180deg,#d9ff62,#C6F432);border-color:#eaffa0;box-shadow:0 8px 24px rgba(198,244,50,.25)}
+.btn.main svg{background:#0C0D10}.btn.main small{color:#27300a}.btn.main .go{color:#0C0D10}
+.btn[hidden]{display:none}
+.soon{margin:30px 0 0}.soon b{display:block}.soon small{color:var(--soft)}
+.soon .row{display:flex;justify-content:center;gap:12px;margin-bottom:12px}
+.soon .row i{width:48px;height:48px;border-radius:14px;border:2px dashed #7b8090;display:grid;place-items:center;color:var(--lime);font-style:normal;font-weight:700;animation:pulse 2.4s ease-in-out infinite}
+.soon .row i:nth-child(2){animation-delay:.4s}.soon .row i:nth-child(3){animation-delay:.8s}
+@keyframes pulse{50%{border-color:var(--lime);box-shadow:0 0 22px rgba(198,244,50,.35)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
+<main>
+<svg class="mark" viewBox="0 0 100 100" role="img" aria-label="H-sib mark"><rect x="18" y="12" width="12" height="76" rx="5" fill="#F4F5F7"/><rect x="70" y="12" width="12" height="76" rx="5" fill="#F4F5F7"/><rect x="28" y="46" width="44" height="12" fill="#F4F5F7"/><rect x="43" y="43" width="14" height="18" rx="3.5" fill="#C6F432"/></svg>
+<h1><span>H-sib</span> links</h1>
+<p class="lead">Small Android apps. Works offline. No ads.</p>
+
+<a class="btn main" href="./">
+<svg viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+<span>Be an early tester<small>Reminder, Workshop, Cycle</small></span><span class="go">&rsaquo;</span></a>
+
+<a class="btn" data-k="youtube" href="#" hidden>
+<svg viewBox="0 0 24 24" fill="#C6F432" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+<span>YouTube<small>Videos and updates</small></span><span class="go">&rsaquo;</span></a>
+
+<a class="btn" data-k="facebook" href="#" hidden>
+<svg viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z"/></svg>
+<span>Facebook<small>News and posts</small></span><span class="go">&rsaquo;</span></a>
+
+<a class="btn" data-k="instagram" href="#" hidden>
+<svg viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/></svg>
+<span>Instagram<small>Pictures and apps</small></span><span class="go">&rsaquo;</span></a>
+
+<a class="btn" data-k="github" href="#" hidden>
+<svg viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
+<span>GitHub<small>Public projects</small></span><span class="go">&rsaquo;</span></a>
+
+<section class="soon" aria-label="More apps are coming">
+<div class="row" aria-hidden="true"><i>?</i><i>?</i><i>?</i></div>
+<b>More apps are coming</b><small>Stay tuned.</small>
+</section>
+</main>
+<script>
+// Owner links. Fill each address, leave empty to keep a button hidden.
+var LINKS = {
+  youtube: "https://www.youtube.com/@h-sib-apps",
+  facebook: "",
+  instagram: "",
+  github: ""
+};
+[].forEach.call(document.querySelectorAll('[data-k]'),function(a){
+  var u=LINKS[a.getAttribute('data-k')];
+  if(u){a.href=u;a.target='_blank';a.rel='noopener noreferrer';a.hidden=false;}
+});
+</script>
+</body>
+</html>
