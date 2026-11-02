@@ -37,6 +37,14 @@ h2{font-size:1.05rem;margin:26px 0 12px;color:var(--text)}
 .app input:focus-visible+.tile{outline:3px solid #fff;outline-offset:3px}
 label.field{display:block;margin:0 0 14px}
 label.field span{display:block;font-weight:600;margin-bottom:6px}
+.ps{width:22px;height:22px;vertical-align:-5px;margin-right:8px}
+.soon{margin:34px 0 0;text-align:center}
+.soon .row{display:flex;justify-content:center;gap:12px;margin-bottom:14px}
+.soon .row i{width:54px;height:54px;border-radius:16px;border:2px dashed #7b8090;display:grid;place-items:center;color:var(--lime);font-style:normal;font-weight:700;font-size:1.4rem;animation:pulse 2.4s ease-in-out infinite}
+.soon .row i:nth-child(2){animation-delay:.4s}.soon .row i:nth-child(3){animation-delay:.8s}
+@keyframes pulse{50%{border-color:var(--lime);box-shadow:0 0 22px rgba(198,244,50,.35)}}
+.soon b{display:block;font-size:1.1rem}
+.soon small{color:var(--soft);font-size:.95rem}
 label.field em{font-style:normal;color:var(--soft);font-weight:400}
 input[type=email],input[type=text]{width:100%;font:inherit;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px;min-height:52px}
 input[type=email]:focus,input[type=text]:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 4px rgba(198,244,50,.16)}
@@ -63,7 +71,7 @@ button.go:disabled{opacity:.7;cursor:wait}
 <div class="intro">
 <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="H-sib mark"><rect x="18" y="12" width="12" height="76" rx="5" fill="#F4F5F7"/><rect x="70" y="12" width="12" height="76" rx="5" fill="#F4F5F7"/><rect x="28" y="46" width="44" height="12" fill="#F4F5F7"/><rect x="43" y="43" width="14" height="18" rx="3.5" fill="#C6F432"/></svg>
 <h1><span>H-sib</span> early access</h1>
-<p class="lead">Try an app before it reaches Google Play. Pick the apps you like and leave your email.</p>
+<p class="lead">Try an app before it reaches the Play Store. Pick the apps you like and leave your email.</p>
 </div>
 
 <form id="f" novalidate>
@@ -94,7 +102,7 @@ button.go:disabled{opacity:.7;cursor:wait}
 </fieldset>
 
 <h2>Where should I add you</h2>
-<label class="field"><span>Your Google account email <em>(the one you use on Play)</em></span>
+<label class="field"><span><svg class="ps" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#C6F432"/><path d="M8 6.2v11.6c0 .6.6.9 1.1.6l9-5.8c.4-.3.4-.9 0-1.2l-9-5.8C8.600 5.300 8 5.600 8 6.200z" fill="#0C0D10"/></svg>Your Google account email <em>(the one you use on the Play Store)</em></span>
 <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@gmail.com" required></label>
 <label class="field"><span>Your name <em>(optional)</em></span>
 <input type="text" id="name" name="name" autocomplete="name" placeholder="First name is fine"></label>
@@ -104,6 +112,12 @@ button.go:disabled{opacity:.7;cursor:wait}
 <p class="err" id="err" role="alert"></p>
 <p class="note">I use your email only to add you to the test and to write to you about it. I do not share it.</p>
 </form>
+
+<section class="soon" aria-label="More apps are coming">
+<div class="row" aria-hidden="true"><i>?</i><i>?</i><i>?</i></div>
+<b>More apps are coming</b>
+<small>Stay tuned.</small>
+</section>
 
 <section class="done" aria-live="polite">
 <svg class="ring" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="48"/><path d="M34 57l15 15 28-31"/></svg>
